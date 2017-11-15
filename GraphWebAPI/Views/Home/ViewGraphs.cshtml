@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "ViewGraphs";
+}
+
+<h2>Escolha os grafos de origem e destino</h2>
+
+<p>Trabalho de Estrutura de Dados</p>
+
+@model GraphWebAPI.Models.Vertex
+
+
+<div class="container">
+    <div class="list-group-item" style="float:left;border-style:none">
+        <h3>Origem</h3>
+        <br>
+        <table>
+            @foreach (var node in ViewBag.Graph.Vertexes)
+            {
+                <tr>
+                    <td>
+                        @Html.RadioButtonFor(nd => nd.Name, "true")
+                    </td>
+                    <td>
+                        @node
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+    <div class="list-group-item" style="float:left;border-style:none">
+        <h3>Destino</h3>
+        <br>
+        <table>
+            @foreach (var node in ViewBag.Graph.Vertexes)
+            {
+                <tr>
+                    <td>
+                        @Html.RadioButtonFor(nd => nd.Name, "true")
+                    </td>
+                    <td>
+                        @node
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <div class="btn">
+        <input type="button" value="Buscar" />
+    </div>
+</div>
+
+

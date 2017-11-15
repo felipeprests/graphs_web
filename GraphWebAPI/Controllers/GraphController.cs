@@ -51,8 +51,8 @@ namespace GraphWebAPI.Controllers
             return new RESTGraphWrapper()
             {
                 Graph = new Graph(nodes, edges),
-                Source = nodes[0],
-                Destination = nodes[10]
+                Source = nodes[1],
+                Destination = nodes[5]
             };
         }
 

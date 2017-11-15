@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Graphs App</title>
+</head>
+<body>
+    <div>
+        <h2>All Graphs</h2>
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'Api/Graph';
+        $(document).ready(function() {
+            $.getJSON(uri)
+                .done(function(data) {
+                    $.each(data, function (key,item) {
+
+                    })
+                })
+        })
+    </script>
+</body>
+</html>
